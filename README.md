@@ -1,168 +1,45 @@
-# Customer Segmentation and Retention Analysis
-Using a telecom churn dataset, i segmented the customers based on their behavioural traits, and built a churn prediction model that could be used to provide strategical retention insights.
+Customer Segmentation and Churn Analysis
 
 Project Overview
 
-This project analyzes telecom customer data to understand customer behavior, segment customers into meaningful groups, and predict customer churn.
-The analysis combines exploratory data analysis (EDA), unsupervised learning (K-Means clustering), and supervised machine learning (Logistic Regression) to generate insights that can help businesses improve customer retention and targeted marketing strategies.
-The dataset used is the Telco Customer Churn dataset, which contains demographic information, service usage details, billing information, and churn labels.
+This project focuses on analyzing customer data to understand behavioral patterns, segment customers into meaningful groups, and predict customer churn. By combining exploratory data analysis with machine learning techniques, the project aims to provide insights that can help businesses improve customer retention and optimize their marketing strategies. The analysis uses the Telco Customer Churn dataset, which contains information about customer demographics, service usage, billing details, and churn status.
 
-Objectives
+Objective
 
-The goals of this project are:
-Analyze customer behavior and churn patterns
-Segment customers based on usage, billing, and service characteristics
-Identify high-risk churn segments
-Build a machine learning model to predict customer churn
-Provide actionable insights for customer retention strategies
+The primary objective of this project is to explore customer behavior and identify factors that influence customer churn. In addition to understanding churn patterns, the project applies clustering techniques to group customers with similar characteristics. These segments can help businesses tailor their strategies for different customer groups. The project also builds a predictive model to identify customers who are likely to churn, enabling companies to take preventive actions to retain them.
 
 Dataset
 
-Dataset: Telco Customer Churn
+The dataset used in this project is the Telco Customer Churn dataset. It contains various attributes related to customers, including demographic information, service subscriptions, billing details, and tenure with the company. The dataset also includes a churn indicator that specifies whether a customer has left the service or continues to remain active. This information makes it possible to analyze patterns related to customer retention and churn behavior.
 
-The dataset contains customer information including:
-Customer tenure
-Monthly charges
-Total charges
-Internet service type
-Contract type
-Payment method
-Support services
-Customer churn status
+Exploratory Data Analysis
 
-The target variable:
-Churn
-Yes → Customer left the service
-No → Customer retained
-
-Exploratory Data Analysis (EDA)
-
-EDA was performed to understand customer behavior and churn patterns.
-
-Key analyses included:
-Churn distribution
-Customer tenure distribution
-Monthly charge distribution
-Churn vs tenure analysis
-Churn vs service usage
-Churn vs payment methods
-Churn vs contract types
-
-Key Findings
-
-Some important patterns observed:
-Customers with low tenure are more likely to churn
-Month-to-month contracts show the highest churn rates
-Customers with higher monthly charges tend to churn more
-Lack of OnlineSecurity or TechSupport increases churn risk
-Electronic check payment method shows higher churn rates
+Exploratory Data Analysis (EDA) was conducted to better understand the structure and characteristics of the dataset. This involved analyzing distributions of key variables such as tenure, monthly charges, and total charges, as well as examining relationships between these variables and churn status. Various visualizations were used to identify trends and patterns. The analysis revealed that customers with shorter tenure and month-to-month contracts tend to churn more frequently, while long-term customers generally show higher retention rates.
 
 Customer Segmentation
-Customer segmentation was performed using K-Means clustering to group customers with similar characteristics.
 
-Steps
-Feature scaling using StandardScaler
-Determining optimal clusters using the Elbow Method
-Evaluating clustering quality using Silhouette Score
-Applying K-Means clustering
+Customer segmentation was performed using the K-Means clustering algorithm. Before applying clustering, relevant features were selected and scaled to ensure that variables with different ranges did not disproportionately influence the clustering results. The optimal number of clusters was determined using techniques such as the Elbow Method. After clustering, the resulting groups were analyzed to understand the characteristics of each segment. These segments represent different types of customers based on factors such as spending behavior, tenure, and service usage.
 
-Segment profiling and interpretation
+Segment Analysis
 
-Result
-The analysis identified four distinct customer segments.
-Example segments include:
-
-High-Value Loyal Customers
-Long tenure
-High total charges
-Low churn rate
-
-New High-Risk Customers
-Low tenure
-High monthly charges
-Highest churn risk
-
-Moderate Customers
-Average tenure and spending
-
-Segmentation helps businesses target retention efforts more effectively.
-
-Segment-Level Churn Insights
-By combining segmentation with churn analysis:
-Some segments show significantly higher churn rates
-New customers with expensive plans are most likely to churn
-Long-term customers show very strong retention
-
-This allows companies to design segment-specific retention strategies.
+After identifying customer segments, each cluster was analyzed to understand its unique characteristics. Some clusters represented high-value customers with long tenure and higher total spending, while others included newer customers who had higher monthly charges and a greater likelihood of churning. By examining these clusters, businesses can identify which groups require targeted retention strategies and which segments contribute the most value.
 
 Churn Prediction Model
-A Logistic Regression model was used to predict customer churn.
 
-Preprocessing
-One-hot encoding of categorical variables
-Feature scaling
-Train-test split
+In addition to segmentation, a churn prediction model was developed using Logistic Regression. The model was trained to classify customers as either likely to churn or likely to remain with the company. Prior to training the model, categorical variables were encoded and numerical features were scaled to improve model performance. The dataset was then split into training and testing sets to evaluate the model's predictive ability.
 
-Model used:
+Model Insights
 
-Logistic Regression
-The model predicts whether a customer is likely to churn or stay.
-
-Key Churn Predictors
-
-Strong predictors include:
-InternetService – Fiber Optic
-Strongest churn predictor
-Higher cost → higher price sensitivity
-
-Payment Method – Electronic Check
-Customers using electronic check churn significantly more
-Associated with lower commitment and manual payments
-
-Senior Citizen Status
-Slightly higher churn probability due to price sensitivity
-
-Streaming Services
-Higher service cost can increase churn if perceived value is low
+The churn prediction model highlights several important factors associated with customer churn. Variables such as contract type, monthly charges, payment method, and service subscriptions play a significant role in determining whether a customer is likely to leave. Customers with month-to-month contracts and higher monthly charges were found to have a higher probability of churning compared to customers with long-term contracts.
 
 Technologies Used
 
-Programming Language:
-Python
-
-Libraries:
-Pandas
-NumPy
-Scikit-learn
-Matplotlib
-Seaborn
-
-Environment:
-Google Colab
-VS Code
-
-Project Workflow :
-
-Data Cleaning and Preprocessing
-Exploratory Data Analysis
-Feature Engineering and Encoding
-Customer Segmentation (K-Means)
-Segment Profiling
-Churn Modeling (Logistic Regression)
-Business Insight Generation
+This project was implemented using Python and several data science libraries. Pandas and NumPy were used for data manipulation and preprocessing, while Matplotlib and Seaborn were used for visualization. Machine learning tasks such as clustering and churn prediction were performed using the Scikit-learn library. The analysis and experimentation were carried out in a Jupyter Notebook environment.
 
 Business Applications
-This project can help companies:
-Identify high-value customer segments
-Detect customers at risk of leaving
-Improve customer retention strategies
-Design targeted marketing campaigns
-Optimize pricing and service offerings
+
+The insights generated from this analysis can help businesses improve their customer retention strategies. By identifying high-risk customers, companies can implement targeted interventions such as personalized offers or improved customer support. Customer segmentation also allows businesses to design marketing campaigns tailored to specific customer groups, ultimately improving customer satisfaction and reducing churn rates.
 
 Future Improvements
-Possible improvements include:
-Testing additional models such as Random Forest, XGBoost, or Gradient Boosting
-Hyperparameter tuning
-Building a real-time churn prediction system
-Creating an interactive dashboard using Streamlit or Power BI
-Deploying the model as an API
+
+While this project provides useful insights, several improvements could further enhance its impact. Additional machine learning models such as Random Forest or Gradient Boosting could be tested to improve churn prediction performance. Hyperparameter tuning could also be performed to optimize model accuracy. Another potential improvement is the development of an interactive dashboard using tools such as Streamlit or Power BI to make the insights more accessible for business stakeholders.
