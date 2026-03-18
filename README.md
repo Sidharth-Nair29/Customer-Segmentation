@@ -16,6 +16,10 @@ Exploratory Data Analysis
 
 Exploratory Data Analysis (EDA) was conducted to better understand the structure and characteristics of the dataset. This involved analyzing distributions of key variables such as tenure, monthly charges, and total charges, as well as examining relationships between these variables and churn status. Various visualizations were used to identify trends and patterns. The analysis revealed that customers with shorter tenure and month-to-month contracts tend to churn more frequently, while long-term customers generally show higher retention rates.
 
+<img width="1015" height="570" alt="Screenshot 2026-03-18 124050" src="https://github.com/user-attachments/assets/cb34f8f3-8308-42cf-a9d5-e8008646fb56" />
+
+
+
 Customer Segmentation
 
 Customer segmentation was performed using the K-Means clustering algorithm. Before applying clustering, relevant features were selected and scaled to ensure that variables with different ranges did not disproportionately influence the clustering results. The optimal number of clusters was determined using techniques such as the Elbow Method. After clustering, the resulting groups were analyzed to understand the characteristics of each segment. These segments represent different types of customers based on factors such as spending behavior, tenure, and service usage.
