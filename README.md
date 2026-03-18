@@ -16,15 +16,21 @@ Exploratory Data Analysis
 
 Exploratory Data Analysis (EDA) was conducted to better understand the structure and characteristics of the dataset. This involved analyzing distributions of key variables such as tenure, monthly charges, and total charges, as well as examining relationships between these variables and churn status. Various visualizations were used to identify trends and patterns. The analysis revealed that customers with shorter tenure and month-to-month contracts tend to churn more frequently, while long-term customers generally show higher retention rates.
 
-Dashboard Preview :-
+Dashboard Preview (Microsoft PowerBI) :-
 
-Factors affecting rate of churn :
+Churn Drivers :
 
 <img width="1015" height="570" alt="Screenshot 2026-03-18 124050" src="https://github.com/user-attachments/assets/cb34f8f3-8308-42cf-a9d5-e8008646fb56" />
 
 <img width="1016" height="571" alt="Screenshot 2026-03-18 124124" src="https://github.com/user-attachments/assets/b5505ffd-91c0-4a88-bf35-0e9cf8be716f" />
 
 <img width="1009" height="570" alt="Screenshot 2026-03-18 124145" src="https://github.com/user-attachments/assets/b2ce4854-e913-4303-a96f-590b147275c6" />
+
+Business Recommendations
+- Encourage long-term contracts through discounts.
+- Focus retention efforts on new customers (first few months).
+- Promote bundled services like tech support and security.
+- Incentivize automatic payment methods.
 
 
 Customer Segmentation
