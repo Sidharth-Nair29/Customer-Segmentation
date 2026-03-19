@@ -50,6 +50,14 @@ Segment Analysis
 
 After identifying customer segments, each cluster was analyzed to understand its unique characteristics. Some clusters represented high-value customers with long tenure and higher total spending, while others included newer customers who had higher monthly charges and a greater likelihood of churning. By examining these clusters, businesses can identify which groups require targeted retention strategies and which segments contribute the most value.
 
+Dashboard Preview (Microsoft PowerBI) :-
+
+Segment-wise Churn Analysis, Insights and Retention Strategies :
+
+<img width="1012" height="567" alt="Screenshot 2026-03-19 132626" src="https://github.com/user-attachments/assets/9bf30e2c-f6cb-461a-b462-b964452423b9" />
+
+<img width="1011" height="568" alt="Screenshot 2026-03-19 141929" src="https://github.com/user-attachments/assets/a48095de-258f-45ed-9dcb-b48d5dd17b54" />
+
 ------------------------------------------------------------------------------------------------------------------------------
 
 Churn Prediction Model
