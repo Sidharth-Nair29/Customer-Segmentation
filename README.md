@@ -4,6 +4,15 @@ Project Overview
 
 This project focuses on analyzing customer data to understand behavioral patterns, segment customers into meaningful groups, and predict customer churn. By combining exploratory data analysis with machine learning techniques, the project aims to provide insights that can help businesses improve customer retention and optimize their marketing strategies. The analysis uses the Telco Customer Churn dataset, which contains information about customer demographics, service usage, billing details, and churn status.
 
+Analysis, Visualization and Machine Learning using Python :-
+Libraries : Pandas, NumPy, Matplotlib, Seaborn, Scikit Learn
+
+SQL Based Analysis :-
+Key techniques : CTEs, Window Functions, Aggregations, Subqueries
+
+Interactive Visualization using PowerBI :-
+Components : KPIs, Charts, Filers, Slicers
+
 ------------------------------------------------------------------------------------------------------------------------------
 
 Objective
