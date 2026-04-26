@@ -122,25 +122,8 @@ Two-page interactive dashboard:
 
 ## Dashboard Preview
 
-### Churn Drivers
-![Churn Drivers 1](dashboard_screenshots/churn_drivers_1.png)
-![Churn Drivers 2](dashboard_screenshots/churn_drivers_2.png)
-![Churn Drivers 3](dashboard_screenshots/churn_drivers_3.png)
-
-### Segment Analysis
-![Segment Analysis 1](dashboard_screenshots/segment_analysis_1.png)
-![Segment Analysis 2](dashboard_screenshots/segment_analysis_2.png)
-
----
-
-## Repository Structure
-
-Dashboard Preview (Microsoft PowerBI) :-
-
-Segment-wise Churn Analysis, Insights and Retention Strategies :
-
+### Churn Analysis by segment
 <img width="1012" height="567" alt="Screenshot 2026-03-19 132626" src="https://github.com/user-attachments/assets/9bf30e2c-f6cb-461a-b462-b964452423b9" />
 
+### Insights and Retention Strategies
 <img width="1011" height="568" alt="Screenshot 2026-03-19 141929" src="https://github.com/user-attachments/assets/a48095de-258f-45ed-9dcb-b48d5dd17b54" />
-
------------------------------------------------------------------------------------------------------------------------------
