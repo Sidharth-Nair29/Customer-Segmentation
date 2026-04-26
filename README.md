@@ -143,4 +143,4 @@ Two-page interactive dashboard:
 ## Author
 **Sidharth R. Nair**  
 MCA Graduate | Aspiring Data Analyst  
-[LinkedIn](linkedin.com/in/sidharth-rashmi-nair) | [GitHub](github.com/Sidharth-Nair29)
+[LinkedIn](www.linkedin.com/in/sidharth-rashmi-nair) | [GitHub](www.github.com/Sidharth-Nair29)
