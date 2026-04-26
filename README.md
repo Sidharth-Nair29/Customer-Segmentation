@@ -127,3 +127,20 @@ Two-page interactive dashboard:
 
 ### Insights and Retention Strategies
 <img width="1011" height="568" alt="Screenshot 2026-03-19 141929" src="https://github.com/user-attachments/assets/a48095de-258f-45ed-9dcb-b48d5dd17b54" />
+
+---
+
+## Future Improvements
+- Test ensemble models (Random Forest, Gradient Boosting) to improve 
+  churn prediction accuracy
+- Perform hyperparameter tuning to optimize model performance
+- Build a Streamlit web app to make predictions accessible to 
+  non-technical stakeholders
+- Incorporate customer lifetime value (CLV) estimation into segmentation
+
+---
+
+## Author
+**Sidharth R. Nair**  
+MCA Graduate | Aspiring Data Analyst  
+[LinkedIn](linkedin.com/in/sidharth-rashmi-nair) | [GitHub](github.com/Sidharth-Nair29)
