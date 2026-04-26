@@ -1,63 +1,139 @@
-Customer Segmentation and Churn Analysis
+# Telecom Customer Segmentation & Churn Analysis
 
-Project Overview
+## Overview
+This project analyzes telecom customer data to understand behavioral patterns, 
+segment customers into meaningful groups, and predict churn. By combining 
+exploratory data analysis, unsupervised clustering, and supervised machine learning, 
+the project generates actionable insights to help businesses improve customer 
+retention and optimize marketing strategies.
 
-This project focuses on analyzing customer data to understand behavioral patterns, segment customers into meaningful groups, and predict customer churn. By combining exploratory data analysis with machine learning techniques, the project aims to provide insights that can help businesses improve customer retention and optimize their marketing strategies. The analysis uses the Telco Customer Churn dataset, which contains information about customer demographics, service usage, billing details, and churn status.
+---
 
-Analysis, Visualization and Machine Learning using Python :-
-Libraries : Pandas, NumPy, Matplotlib, Seaborn, Scikit Learn
+## Business Problem
+Customer churn is one of the most critical challenges in the telecom industry. 
+Acquiring new customers costs significantly more than retaining existing ones, yet 
+most businesses lack visibility into:
 
-SQL Based Analysis :-
-Key techniques : CTEs, Window Functions, Aggregations, Subqueries
+- **Who is likely to churn** before they actually leave
+- **Why certain customer segments churn** at higher rates than others
+- **Which customers are worth prioritizing** for retention spend
 
-Interactive Visualization using PowerBI :-
-Components : KPIs, Charts, Filers, Slicers
+This project addresses all three by combining segmentation and predictive modelling 
+into a unified analysis framework.
 
-------------------------------------------------------------------------------------------------------------------------------
+---
 
-Objective
+## Dataset
+- **Source**: [Telco Customer Churn Dataset](https://www.kaggle.com/datasets/blastchar/telco-customer-churn)
+- **Features**: Customer demographics, service subscriptions, billing details, 
+  contract type, tenure, and churn status
+- **Target variable**: `Churn` (Yes / No)
 
-The primary objective of this project is to explore customer behavior and identify factors that influence customer churn. In addition to understanding churn patterns, the project applies clustering techniques to group customers with similar characteristics. These segments can help businesses tailor their strategies for different customer groups. The project also builds a predictive model to identify customers who are likely to churn, enabling companies to take preventive actions to retain them.
+---
 
-------------------------------------------------------------------------------------------------------------------------------
+## Tools & Technologies
+| Tool | Purpose |
+|------|---------|
+| Python (Pandas, NumPy) | Data cleaning and preprocessing |
+| Python (Matplotlib, Seaborn) | Exploratory data analysis and visualization |
+| Python (Scikit-learn) | Clustering (K-Means) and churn prediction (Logistic Regression) |
+| MySQL | Segment-level SQL analysis |
+| Power BI | Interactive dashboard and visualization |
+| Jupyter Notebook | Analysis environment |
 
-Dataset
+---
 
-The dataset used in this project is the Telco Customer Churn dataset. It contains various attributes related to customers, including demographic information, service subscriptions, billing details, and tenure with the company. The dataset also includes a churn indicator that specifies whether a customer has left the service or continues to remain active. This information makes it possible to analyze patterns related to customer retention and churn behavior.
+## Methodology
 
-------------------------------------------------------------------------------------------------------------------------------
+### 1. Data Cleaning & Preprocessing
+- Handled missing and inconsistent values
+- Encoded categorical variables for machine learning compatibility
+- Scaled numerical features to normalize variable ranges
+- Validated data types and distributions before analysis
 
-Exploratory Data Analysis
+### 2. Exploratory Data Analysis
+- Analyzed distributions of key variables: tenure, monthly charges, total charges
+- Examined relationships between service features and churn status
+- Key finding: customers with shorter tenure and month-to-month contracts churn 
+  significantly more frequently than long-term customers
 
-Exploratory Data Analysis (EDA) was conducted to better understand the structure and characteristics of the dataset. This involved analyzing distributions of key variables such as tenure, monthly charges, and total charges, as well as examining relationships between these variables and churn status. Various visualizations were used to identify trends and patterns. The analysis revealed that customers with shorter tenure and month-to-month contracts tend to churn more frequently, while long-term customers generally show higher retention rates.
+### 3. Customer Segmentation (K-Means Clustering)
+- Selected and scaled relevant features for clustering
+- Determined optimal number of clusters using the Elbow Method
+- Profiled each cluster to understand behavioral and spending characteristics
+- Identified high-value segments vs high-churn-risk segments
 
-Dashboard Preview (Microsoft PowerBI) :-
+### 4. Churn Prediction (Logistic Regression)
+- Split dataset into training and testing sets
+- Trained Logistic Regression classifier to predict churn probability
+- Evaluated model performance on held-out test set
+- Identified key churn drivers from model coefficients
 
-Churn Drivers :
+### 5. SQL Analysis
+- Conducted segment-level analysis on clustered data using MySQL
+- Key techniques: CTEs, window functions, aggregations, subqueries
+- Validated Python segmentation findings at the query level
 
-<img width="1015" height="570" alt="Screenshot 2026-03-18 124050" src="https://github.com/user-attachments/assets/cb34f8f3-8308-42cf-a9d5-e8008646fb56" />
+### 6. Dashboard (Power BI)
+Two-page interactive dashboard:
+- **Churn Drivers** — KPIs, churn rate breakdowns by contract type, payment 
+  method, tenure, and service subscriptions
+- **Segment Analysis** — Cluster profiles, segment-wise churn rates, and 
+  targeted retention strategies per segment
 
-<img width="1016" height="571" alt="Screenshot 2026-03-18 124124" src="https://github.com/user-attachments/assets/b5505ffd-91c0-4a88-bf35-0e9cf8be716f" />
+---
 
-<img width="1009" height="570" alt="Screenshot 2026-03-18 124145" src="https://github.com/user-attachments/assets/b2ce4854-e913-4303-a96f-590b147275c6" />
+## Key Findings
 
-Business Recommendations
-- Encourage long-term contracts through discounts.
-- Focus retention efforts on new customers (first few months).
-- Promote bundled services like tech support and security.
-- Incentivize automatic payment methods.
+**Churn Drivers**
+- Month-to-month contract customers churn at significantly higher rates than 
+  customers on annual or two-year contracts
+- Higher monthly charges correlate with increased churn probability
+- Customers without tech support or online security services show elevated churn rates
+- Manual payment methods (paper check) associated with higher churn vs 
+  automatic payment methods
 
-------------------------------------------------------------------------------------------------------------------------------
+**Customer Segments**
+- High-value segment: long tenure, higher total spend, low churn risk — 
+  priority for loyalty rewards
+- High-risk segment: newer customers, high monthly charges, month-to-month 
+  contracts — priority for early intervention
+- Mid-value segment: moderate tenure and spending — receptive to upselling 
+  bundled services
 
-Customer Segmentation
+**Churn Prediction Model**
+- Contract type, monthly charges, payment method, and service subscriptions 
+  are the strongest predictors of churn
+- Model enables proactive identification of at-risk customers before they leave
 
-Customer segmentation was performed using the K-Means clustering algorithm. Before applying clustering, relevant features were selected and scaled to ensure that variables with different ranges did not disproportionately influence the clustering results. The optimal number of clusters was determined using techniques such as the Elbow Method. After clustering, the resulting groups were analyzed to understand the characteristics of each segment. These segments represent different types of customers based on factors such as spending behavior, tenure, and service usage.
+---
 
-------------------------------------------------------------------------------------------------------------------------------
+## Strategic Recommendations
+- **Encourage long-term contracts** through targeted discounts and incentives
+- **Focus retention efforts on new customers** — churn risk is highest in the 
+  first few months of tenure
+- **Promote bundled services** (tech support, online security) to increase 
+  switching costs and reduce churn
+- **Incentivize automatic payment methods** — associated with lower churn rates
+- **Deploy churn prediction model** to flag at-risk customers for proactive 
+  outreach before they leave
 
-Segment Analysis
+---
 
-After identifying customer segments, each cluster was analyzed to understand its unique characteristics. Some clusters represented high-value customers with long tenure and higher total spending, while others included newer customers who had higher monthly charges and a greater likelihood of churning. By examining these clusters, businesses can identify which groups require targeted retention strategies and which segments contribute the most value.
+## Dashboard Preview
+
+### Churn Drivers
+![Churn Drivers 1](dashboard_screenshots/churn_drivers_1.png)
+![Churn Drivers 2](dashboard_screenshots/churn_drivers_2.png)
+![Churn Drivers 3](dashboard_screenshots/churn_drivers_3.png)
+
+### Segment Analysis
+![Segment Analysis 1](dashboard_screenshots/segment_analysis_1.png)
+![Segment Analysis 2](dashboard_screenshots/segment_analysis_2.png)
+
+---
+
+## Repository Structure
 
 Dashboard Preview (Microsoft PowerBI) :-
 
@@ -67,32 +143,4 @@ Segment-wise Churn Analysis, Insights and Retention Strategies :
 
 <img width="1011" height="568" alt="Screenshot 2026-03-19 141929" src="https://github.com/user-attachments/assets/a48095de-258f-45ed-9dcb-b48d5dd17b54" />
 
-------------------------------------------------------------------------------------------------------------------------------
-
-Churn Prediction Model
-
-In addition to segmentation, a churn prediction model was developed using Logistic Regression. The model was trained to classify customers as either likely to churn or likely to remain with the company. Prior to training the model, categorical variables were encoded and numerical features were scaled to improve model performance. The dataset was then split into training and testing sets to evaluate the model's predictive ability.
-
-------------------------------------------------------------------------------------------------------------------------------
-
-Model Insights
-
-The churn prediction model highlights several important factors associated with customer churn. Variables such as contract type, monthly charges, payment method, and service subscriptions play a significant role in determining whether a customer is likely to leave. Customers with month-to-month contracts and higher monthly charges were found to have a higher probability of churning compared to customers with long-term contracts.
-
-------------------------------------------------------------------------------------------------------------------------------
-
-Technologies Used
-
-This project was implemented using Python and several data science libraries. Pandas and NumPy were used for data manipulation and preprocessing, while Matplotlib and Seaborn were used for visualization. Machine learning tasks such as clustering and churn prediction were performed using the Scikit-learn library. The analysis and experimentation were carried out in a Jupyter Notebook environment.
-
-------------------------------------------------------------------------------------------------------------------------------
-
-Business Applications
-
-The insights generated from this analysis can help businesses improve their customer retention strategies. By identifying high-risk customers, companies can implement targeted interventions such as personalized offers or improved customer support. Customer segmentation also allows businesses to design marketing campaigns tailored to specific customer groups, ultimately improving customer satisfaction and reducing churn rates.
-
-------------------------------------------------------------------------------------------------------------------------------
-
-Future Improvements
-
-While this project provides useful insights, several improvements could further enhance its impact. Additional machine learning models such as Random Forest or Gradient Boosting could be tested to improve churn prediction performance. Hyperparameter tuning could also be performed to optimize model accuracy. Another potential improvement is the development of an interactive dashboard using tools such as Streamlit or Power BI to make the insights more accessible for business stakeholders.
+-----------------------------------------------------------------------------------------------------------------------------
